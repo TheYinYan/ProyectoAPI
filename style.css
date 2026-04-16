@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: 'Courier New', monospace;
+}
+
+/* ========== HEADER CON IMAGEN DE FONDO ========== */
+header {
+    background-image: url('img/descarga.png');
+    background-size: cover, auto;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: #ffd700;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid #ffd700;
+    position: relative;
+}
+
+/* Si quieres usar una imagen local (descárgala y ponla en img/header-bg.jpg) */
+/* header {
+    background-image: url('img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+} */
+
+/* Capa oscura encima de la imagen para que el texto se lea bien */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header h1,
+header nav {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background: #ffd700;
+    color: #8B0000;
+}
+
+/* ========== RESTO DEL CSS (igual que antes) ========== */
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+button {
+    background: #ffd700;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Impact', sans-serif;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #8B5a00;
+    transition: all 0.1s ease;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #8B5a00;
+}
+
+button:hover {
+    background: #ffcc00;
+    transform: scale(1.02);
+}
+
+.resultados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* CARTELES WANTED */
+.wanted-poster {
+    width: 320px;
+    background: #fdf0d8;
+    border: 10px double #8B0000;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.wanted-poster:hover {
+    transform: translateY(-8px);
+}
+
+.wanted-header {
+    text-align: center;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.wanted-stamp {
+    font-family: 'Impact', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 6px;
+    color: #8B0000;
+    display: block;
+}
+
+.wanted-dead-or-alive {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 0.25rem;
+}
+
+.wanted-image.placeholder {
+    background: #2c1810;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #8B0000;
+    margin: 1rem 0;
+}
+
+.avatar-placeholder,
+.fruit-avatar {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffd700;
+}
+
+.avatar-emoji,
+.fruit-emoji {
+    font-size: 3rem;
+}
+
+.wanted-name {
+    font-family: 'Impact', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.wanted-bounty {
+    text-align: center;
+    background: #2c1810;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+
+.bounty-label {
+    font-size: 0.7rem;
+    color: #ffd700;
+    display: block;
+}
+
+.bounty-amount {
+    font-family: 'Impact', sans-serif;
+    font-size: 1.3rem;
+    color: #ffd700;
+}
+
+.wanted-details {
+    margin: 0.8rem 0;
+    padding: 0.5rem;
+    background: rgba(139, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    padding: 0.2rem 0;
+}
+
+.detail-label {
+    color: #8B0000;
+    font-weight: bold;
+}
+
+.detail-value {
+    color: #2c1810;
+}
+
+.wanted-footer {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 2px solid #8B0000;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.marine-seal {
+    color: #8B0000;
+}
+
+.world-government {
+    color: #2c1810;
+}
+
+.fruit-poster .wanted-stamp {
+    font-size: 1.3rem;
+}
+
+.fruit-bounty {
+    background: #1a5276;
+}
+
+.fruit-placeholder {
+    background: #1a5276;
+}
+
+.loader,
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffd700;
+    border-radius: 10px;
+}
+
+footer {
+    background: #1a0f0a;
+    color: #ffd700;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    border-top: 3px solid #ffd700;
+}
+
+.sobremi {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .wanted-poster {
+        width: 280px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+}
