@@ -143,7 +143,7 @@ function crearCartelFrutas(frutas) {
             
             <div class="wanted-details">
                 <div class="detail-row description">
-                    <span class="detail-label">Poder:</span>
+                    
                     <span class="detail-value">${descripcion}</span>
                 </div>
             </div>

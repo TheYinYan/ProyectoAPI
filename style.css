@@ -49,7 +49,6 @@ header h1 {
     font-size: 2.5rem;
     letter-spacing: 4px;
     text-shadow: 3px 3px 0 #3a0000;
-    word-break: keep-all;
 }
 
 nav ul {
@@ -293,6 +292,31 @@ button:hover {
     margin: 0;
 }
 
+/* ========== PÁGINA SOBRE MÍ ========== */
+.sobremi-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.sobremi-poster {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.sobremi-poster .avatar-emoji {
+    font-size: 5rem;
+}
+
+.sobremi-poster .wanted-name {
+    font-size: 1.3rem;
+}
+
+.sobremi-poster .bounty-amount {
+    font-size: 1.5rem;
+}
+
 /* ========== SECCIÓN TÉCNICAS Y GEARS ========== */
 .tecnicas-section {
     background: rgba(0, 0, 0, 0.85);
@@ -490,31 +514,7 @@ button:hover {
     background: #1a5276;
 }
 
-/* ========== SOBRE MÍ ========== */
-.sobremi {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 2rem;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-    color: #ffd700;
-    border: 2px solid #ffd700;
-}
-
-.sobremi h2 {
-    font-family: 'Bangers', cursive;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-}
-
-.sobremi p {
-    font-family: 'Special Elite', monospace;
-    margin: 0.5rem 0;
-}
-
-/* ========== LOADER ========== */
+/* ========== LOADER Y ERRORES ========== */
 .loader,
 .error-message {
     text-align: center;
@@ -559,6 +559,10 @@ footer {
         width: 300px;
     }
     
+    .sobremi-poster {
+        width: 320px;
+    }
+    
     .tecnicas-section {
         width: 340px;
     }
@@ -569,6 +573,14 @@ footer {
     
     .wanted-stamp {
         font-size: 1.5rem;
+    }
+    
+    .sobremi-poster .wanted-name {
+        font-size: 1rem;
+    }
+    
+    .sobremi-poster .avatar-emoji {
+        font-size: 3.5rem;
     }
 }
 
