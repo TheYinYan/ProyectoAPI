@@ -239,6 +239,7 @@ button:hover {
 }
 
 .detail-value {
+    text-align: right;
     color: #2c1810;
 }
 
