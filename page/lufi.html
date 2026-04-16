@@ -3,43 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monkey D. Luffy - One Piece</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Monkey D. Luffy - Técnicas y Gears</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../img/icon.png">
 </head>
 <body>
     <header>
-        <h1>🐵 MONKEY D. LUFFY 🐵</h1>
+        <h1>MONKEY D. LUFFY</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="sobremi.html">Sobre mí</a></li>
                 <li><a href="lufi.html">Luffy</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="luffy-info">
-            <h2>Información de Monkey D. Luffy</h2>
-            <p><strong>Nombre Completo:</strong> Monkey D. Luffy</p>
-            <p><strong>Alias:</strong> Luffy, "El Sombrero de Paja"</p>
-            <p><strong>Edad:</strong> 19 años</p>
-            <p><strong>Altura:</strong> 1.72 m</p>
-            <p><strong>Peso:</strong> 64 kg</p>
-            <p><strong>Fruta del Diablo:</strong> Gomu Gomu no Mi (Fruta del Estiramiento)</p>
-            <p><strong>Habilidades:</strong></p>
-            <ul>
-                <li>Elasticidad: Puede estirar su cuerpo como si fuera de goma.</li>
-                <li>Resistencia: Es extremadamente resistente a los ataques físicos.</li>
-                <li>Haki: Posee las tres formas de Haki (Observación, Armamento y Rey).</li>
-                <li>Liderazgo: Es el capitán de los Piratas del Sombrero de Paja.</li>
-            </ul>
-        </section>
+    <main class="luffy-main">
+        <!-- CARTEL WANTED DE LUFFY -->
+        <div class="wanted-poster luffy-poster">
+            <div class="wanted-header">
+                <span class="wanted-stamp">WANTED</span>
+                <div class="wanted-dead-or-alive">DEAD OR ALIVE</div>
+            </div>
+            
+            <div class="wanted-image placeholder">
+                <div class="avatar-placeholder">
+                    <img src="../img/Luffy.png" alt="Monkey D. Luffy">
+                </div>
+            </div>
+            
+            <div class="wanted-name" id="luffy-nombre">MONKEY D. LUFFY</div>
+            
+            <div class="wanted-bounty">
+                <span class="bounty-label">REWARD</span>
+                <span class="bounty-amount" id="luffy-bounty">3,000,000,000฿</span>
+            </div>
+            
+            <div class="wanted-details" id="luffy-detalles">
+                <div class="detail-row">
+                    <span class="detail-label">Ocupación:</span>
+                    <span class="detail-value" id="luffy-job">Cargando...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Afiliación:</span>
+                    <span class="detail-value" id="luffy-crew">Cargando...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Fruta DF:</span>
+                    <span class="detail-value" id="luffy-fruit">Cargando...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Edad:</span>
+                    <span class="detail-value" id="luffy-age">Cargando...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Altura:</span>
+                    <span class="detail-value" id="luffy-size">Cargando...</span>
+                </div>
+            </div>
+            
+            <div class="wanted-footer">
+                <span class="marine-seal">MARINE</span>
+                <span class="world-government">WORLD GOVERNMENT</span>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE TÉCNICAS Y GEARS -->
+        <div class="tecnicas-section">
+            <div class="tecnicas-tabs">
+                <button id="btnModoTecnicas" class="tab-btn activo">⚡ TÉCNICAS</button>
+                <button id="btnModoGears" class="tab-btn">🔥 GEARS</button>
+            </div>
+            
+            <div id="tecnicas-container" class="tecnicas-container">
+                <div class="loader">Cargando datos desde la API...</div>
+            </div>
+            
+            <div class="tecnicas-botones">
+                <button id="btnAnterior" class="tec-btn" disabled>◀ ANTERIORES</button>
+                <span id="pagina-info" class="pagina-info">Página 1</span>
+                <button id="btnSiguiente" class="tec-btn">SIGUIENTES ▶</button>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>Proyecto One Piece - Monkey D. Luffy</p>
+        <p>Proyecto One Piece - Monkey D. Luffy - Técnicas y Gears desde API</p>
     </footer>
+
+    <script src="../js/luffy.js"></script>
 </body>
 </html>
