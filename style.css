@@ -576,3 +576,269 @@ footer {
     font-size: 1.5rem;
     letter-spacing: 3px;
 }
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablets y pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+    .luffy-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tecnicas-section {
+        width: 500px;
+    }
+    
+    .luffy-poster {
+        width: 450px;
+    }
+}
+
+/* Tablets pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    nav a {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .wanted-poster {
+        width: 280px;
+    }
+    
+    .luffy-poster {
+        width: 380px;
+    }
+    
+    .tecnicas-section {
+        width: 380px;
+        padding: 1rem;
+    }
+    
+    .sobremi-poster {
+        width: 340px;
+    }
+    
+    .artefacto-card {
+        width: 280px;
+    }
+    
+    .artefactos-tabs .tab-btn {
+        min-width: 100px;
+        font-size: 0.8rem;
+    }
+    
+    button {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+    
+    .wanted-stamp {
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+    }
+    
+    .wanted-name {
+        font-size: 1.1rem;
+    }
+    
+    .bounty-amount {
+        font-size: 1.1rem;
+    }
+}
+
+/* Móviles grandes (hasta 600px) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+    }
+    
+    nav a {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .botones {
+        gap: 1rem;
+    }
+    
+    button {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .wanted-poster {
+        width: 260px;
+        padding: 0.7rem;
+    }
+    
+    .luffy-poster {
+        width: 320px;
+    }
+    
+    .tecnicas-section {
+        width: 320px;
+    }
+    
+    .sobremi-poster {
+        width: 300px;
+    }
+    
+    .sobremi-poster .wanted-name {
+        font-size: 1rem;
+    }
+    
+    .sobremi-poster .avatar-emoji {
+        font-size: 3.5rem;
+    }
+    
+    .artefacto-card {
+        width: 260px;
+    }
+    
+    .artefactos-tabs {
+        gap: 0.8rem;
+    }
+    
+    .artefactos-tabs .tab-btn {
+        min-width: 85px;
+        font-size: 0.7rem;
+        padding: 6px;
+    }
+    
+    .detail-row {
+        font-size: 0.6rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+    
+    .detail-value {
+        text-align: left;
+    }
+    
+    .wanted-footer {
+        font-size: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .tecnicas-tabs {
+        gap: 0.5rem;
+    }
+    
+    .tab-btn {
+        font-size: 0.7rem;
+        padding: 6px;
+    }
+    
+    .tec-btn {
+        padding: 5px 12px;
+        font-size: 0.6rem;
+    }
+    
+    .pagina-info {
+        font-size: 0.7rem;
+    }
+    
+    .tecnicas-container {
+        max-height: 400px;
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.1rem;
+    }
+    
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    nav a {
+        padding: 0.25rem 0.6rem;
+        font-size: 0.65rem;
+    }
+    
+    .wanted-poster {
+        width: 240px;
+    }
+    
+    .luffy-poster {
+        width: 280px;
+    }
+    
+    .tecnicas-section {
+        width: 280px;
+    }
+    
+    .artefacto-card {
+        width: 240px;
+    }
+    
+    .artefacto-card .wanted-stamp {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+    
+    .wanted-stamp {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+    
+    .wanted-name {
+        font-size: 0.9rem;
+    }
+    
+    .bounty-amount {
+        font-size: 0.9rem;
+    }
+    
+    .avatar-emoji {
+        font-size: 3rem;
+    }
+    
+    .tecnica-card h3 {
+        font-size: 0.75rem;
+    }
+    
+    .tecnica-tipo {
+        font-size: 0.5rem;
+    }
+    
+    .tecnica-card p {
+        font-size: 0.6rem;
+    }
+    
+    .loader, .error-message {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+    
+    footer {
+        font-size: 0.6rem;
+    }
+}
