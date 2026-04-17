@@ -1,9 +1,4 @@
-/**
- * @file script.js
- * @brief Proyecto DAM - One Piece API - Carteles WANTED
- * @author Samuel Ruiz Martin
- * @date 2026-04-16
- */
+"use strict";
 
 const botonPersonajes = document.getElementById('btnPersonajes');
 const botonFrutas = document.getElementById('btnFrutas');

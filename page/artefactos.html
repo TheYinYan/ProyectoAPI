@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artefactos - One Piece</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+</head>
+<body>
+    <header>
+        <h1>ARTEFACTOS DEL GRAND LINE</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="luffy.html">Luffy</a></li>
+                <li><a href="artefactos.html">Artefactos</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="artefactos-tabs">
+            <button id="btnEspadas" class="tab-btn activo">ESPADAS</button>
+            <button id="btnBarcos" class="tab-btn">BARCOS</button>
+            <button id="btnDiales" class="tab-btn">DIALES</button>
+        </div>
+
+        <div id="artefactos-container" class="resultados">
+            <div class="loader">Cargando artefactos...</div>
+        </div>
+
+        <div class="artefactos-botones">
+            <button id="btnAnterior" class="tec-btn" disabled>◀ ANTERIOR</button>
+            <span id="pagina-info" class="pagina-info">Página 1</span>
+            <button id="btnSiguiente" class="tec-btn">SIGUIENTE ▶</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Proyecto One Piece - Artefactos del Grand Line</p>
+    </footer>
+
+    <script src="../js/artefactos.js"></script>
+</body>
+</html>

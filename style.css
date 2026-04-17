@@ -89,6 +89,14 @@ main {
     width: 100%;
 }
 
+.txt-ini{
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    color: #ffd700;
+    margin-bottom: 2rem;
+}
+
+
 /* ========== BOTONES PRINCIPALES ========== */
 .botones {
     display: flex;
@@ -255,6 +263,7 @@ button:hover {
 }
 
 .detail-value {
+    text-align: right;
     color: #2c1810;
 }
 
@@ -538,58 +547,32 @@ footer {
     font-size: 0.8rem;
 }
 
-/* ========== RESPONSIVE ========== */
-@media (max-width: 900px) {
-    .luffy-main {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .tecnicas-section {
-        width: 380px;
-    }
+/* ========== PÁGINA DE ARTEFACTOS ========== */
+.artefactos-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-    .wanted-poster {
-        width: 280px;
-    }
-    
-    .luffy-poster {
-        width: 300px;
-    }
-    
-    .sobremi-poster {
-        width: 320px;
-    }
-    
-    .tecnicas-section {
-        width: 340px;
-    }
-    
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    .wanted-stamp {
-        font-size: 1.5rem;
-    }
-    
-    .sobremi-poster .wanted-name {
-        font-size: 1rem;
-    }
-    
-    .sobremi-poster .avatar-emoji {
-        font-size: 3.5rem;
-    }
+.artefactos-tabs .tab-btn {
+    min-width: 120px;
 }
 
-@media (max-width: 480px) {
-    .tecnicas-section {
-        width: 300px;
-    }
-    
-    .tecnica-card h3 {
-        font-size: 0.8rem;
-    }
+.artefactos-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.artefacto-card {
+    width: 320px;
+}
+
+.artefacto-card .wanted-stamp {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
 }
