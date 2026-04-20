@@ -178,4 +178,4 @@ One Piece es propiedad de Eiichiro Oda, Shueisha, Toei Animation.
 
 ## ¡Gracias por visitar el proyecto!
 
-> *"Yo seré el Rey de los Programadores, ¡y este es mi tesoro!"* 
+> *"Yo seré el Rey de los Programadores, ¡y este es mi tesoro!"*
