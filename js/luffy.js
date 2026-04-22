@@ -1,19 +1,19 @@
-/**
- * @file luffy.js
- * @brief Página de Luffy - Gears y Técnicas desde API
- * @author Samuel Ruiz Martin
- * @date 2026-04-16
- */
-
 let gears = [];
 let tecnicas = [];
 let modo = 'tecnicas';
 let pagina = 1;
 const porPagina = 4;
 
-// ============================================
-// DATOS DE LUFFY
-// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    cargarLuffy();
+    cargarGears();
+    cargarTecnicas();
+
+    document.getElementById('btnSiguiente').onclick = siguiente;
+    document.getElementById('btnAnterior').onclick = anterior;
+    document.getElementById('btnModoTecnicas').onclick = () => cambiarModo('tecnicas');
+    document.getElementById('btnModoGears').onclick = () => cambiarModo('gears');
+});
 
 function cargarLuffy() {
     fetch('https://api.api-onepiece.com/v2/characters/en')
@@ -48,41 +48,29 @@ function cargarLuffy() {
         .catch(err => console.log('Error al cargar Luffy:', err));
 }
 
-// ============================================
-// GEARS DESDE API
-// ============================================
-
 function cargarGears() {
     fetch('https://api.api-onepiece.com/v2/luffy-gears/en')
         .then(res => res.json())
         .then(data => {
             gears = data;
-            if (modo === 'gears') mostrarGears();
+            mostrarGears();
         })
         .catch(err => {
             console.log('Error Gears:', err);
         });
 }
 
-// ============================================
-// TÉCNICAS DESDE API
-// ============================================
-
 function cargarTecnicas() {
     fetch('https://api.api-onepiece.com/v2/luffy-techniques/en')
         .then(res => res.json())
         .then(data => {
             tecnicas = data;
-            if (modo === 'tecnicas') mostrarTecnicas();
+            mostrarTecnicas();
         })
         .catch(err => {
             console.log('Error Técnicas:', err);
         });
 }
-
-// ============================================
-// MOSTRAR GEARS
-// ============================================
 
 function mostrarGears() {
     const inicio = (pagina - 1) * porPagina;
@@ -105,10 +93,6 @@ function mostrarGears() {
     document.getElementById('btnSiguiente').disabled = pagina === Math.ceil(gears.length / porPagina);
 }
 
-// ============================================
-// MOSTRAR TÉCNICAS
-// ============================================
-
 function mostrarTecnicas() {
     const inicio = (pagina - 1) * porPagina;
     const items = tecnicas.slice(inicio, inicio + porPagina);
@@ -130,10 +114,6 @@ function mostrarTecnicas() {
     document.getElementById('btnAnterior').disabled = pagina === 1;
     document.getElementById('btnSiguiente').disabled = pagina === Math.ceil(tecnicas.length / porPagina);
 }
-
-// ============================================
-// CONTROLES
-// ============================================
 
 function siguiente() {
     const total = modo === 'tecnicas' ? tecnicas.length : gears.length;
@@ -172,18 +152,3 @@ function cambiarModo(nuevoModo) {
         else document.getElementById('tecnicas-container').innerHTML = '<div class="loader">Cargando gears...</div>';
     }
 }
-
-// ============================================
-// INICIAR
-// ============================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    cargarLuffy();
-    cargarGears();
-    cargarTecnicas();
-
-    document.getElementById('btnSiguiente').onclick = siguiente;
-    document.getElementById('btnAnterior').onclick = anterior;
-    document.getElementById('btnModoTecnicas').onclick = () => cambiarModo('tecnicas');
-    document.getElementById('btnModoGears').onclick = () => cambiarModo('gears');
-});

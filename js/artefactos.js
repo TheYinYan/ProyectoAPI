@@ -7,9 +7,17 @@ let modo = 'espadas';
 let pagina = 1;
 const porPagina = 4;
 
-// ============================================
-// CARGAR DATOS DESDE API
-// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    cargarEspadas();
+    cargarBarcos();
+    cargarDiales();
+    
+    document.getElementById('btnSiguiente').onclick = siguiente;
+    document.getElementById('btnAnterior').onclick = anterior;
+    document.getElementById('btnEspadas').onclick = () => cambiarModo('espadas');
+    document.getElementById('btnBarcos').onclick = () => cambiarModo('barcos');
+    document.getElementById('btnDiales').onclick = () => cambiarModo('diales');
+});
 
 function cargarEspadas() {
     fetch('https://api.api-onepiece.com/v2/swords/en')
@@ -46,10 +54,6 @@ function cargarDiales() {
             console.log('Error Dials:', err);
         });
 }
-
-// ============================================
-// MOSTRAR ESPADAS
-// ============================================
 
 function mostrarEspadas() {
     if (espadas.length === 0) {
@@ -98,10 +102,6 @@ function mostrarEspadas() {
     actualizarPaginacion(espadas.length);
 }
 
-// ============================================
-// MOSTRAR BARCOS
-// ============================================
-
 function mostrarBarcos() {
     if (barcos.length === 0) {
         document.getElementById('artefactos-container').innerHTML = '<div class="loader">No hay barcos para mostrar</div>';
@@ -149,10 +149,6 @@ function mostrarBarcos() {
     actualizarPaginacion(barcos.length);
 }
 
-// ============================================
-// MOSTRAR DIALES
-// ============================================
-
 function mostrarDiales() {
     if (diales.length === 0) {
         document.getElementById('artefactos-container').innerHTML = '<div class="loader">No hay diales para mostrar</div>';
@@ -195,10 +191,6 @@ function mostrarDiales() {
     
     actualizarPaginacion(diales.length);
 }
-
-// ============================================
-// PAGINACIÓN Y CAMBIO DE MODO
-// ============================================
 
 function actualizarPaginacion(totalItems) {
     const totalPaginas = Math.ceil(totalItems / porPagina);
@@ -255,19 +247,3 @@ function cambiarModo(nuevoModo) {
         else document.getElementById('artefactos-container').innerHTML = '<div class="loader">Cargando diales...</div>';
     }
 }
-
-// ============================================
-// INICIAR
-// ============================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    cargarEspadas();
-    cargarBarcos();
-    cargarDiales();
-    
-    document.getElementById('btnSiguiente').onclick = siguiente;
-    document.getElementById('btnAnterior').onclick = anterior;
-    document.getElementById('btnEspadas').onclick = () => cambiarModo('espadas');
-    document.getElementById('btnBarcos').onclick = () => cambiarModo('barcos');
-    document.getElementById('btnDiales').onclick = () => cambiarModo('diales');
-});
